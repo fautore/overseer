@@ -11,6 +11,7 @@ import (
 type process struct {
     command string
     arguments []string
+    scanner *bufio.Scanner
 }
 
 func readStuff(scanner *bufio.Scanner) {
@@ -44,6 +45,6 @@ func main() {
         go startChildProcess(p.command, p.arguments...)
     }
     for {
+
     }
-    //startChildProcess(exec.Command("fetus/fetus", "half", "0.5")) 
 }
